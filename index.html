@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mi Página Web con Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+
+ 
+    <!-- Vincular Bootstrap desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Cargar MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+ 
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Física de ondas y señales</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+ 
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#ley-hooke">Ley de Hooke</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#segunda-ley">Segunda Ley de Newton Aplicada</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#movimiento-no-amortiguado">Movimiento Libre No Amortiguado</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#movimiento-amortiguado">Movimiento Libre Amortiguado</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+    <main>
+        <!-- Sección 1: Introducción -->
+        <section class="bg-primary text-white text-center py-5">
+            <div class="container">
+                <h1 class="display-4">Sistema Masa-Resorte y Movimiento Libre</h1>
+                <p class="lead">Ecuaciones diferenciales en un sistema Masa - Resorte</p>
+            </div>
+        </section>
+ 
+        <!-- Sección 2: Ley de Hooke -->
+        <section id="ley-hooke" class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Ley de Hooke</h2>
+                <p>Un resorte ejerce una fuerza restauradora proporcional a su elongación: \( F = -ks \)</p>
+                <p>Donde:</p>
+                <ul>
+                    <li>\( F \): fuerza del resorte (N)</li>
+                    <li>\( k \): constante del resorte (N/m)</li>
+                    <li>\( s \): elongación (m)</li>
+                </ul>
+                <p>Ejemplo: Si un peso de 50 N estira un resorte 0.2 m, entonces \( k = 250 \, \text{N/m} \)</p>
+            </div>
+        </section>
+ 
+        <!-- Sección 3: Segunda Ley de Newton Aplicada -->
+        <section id="segunda-ley" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Segunda Ley de Newton Aplicada</h2>
+                <p>Cuando una masa \( m \) se cuelga de un resorte, alcanza un punto de equilibrio:</p>
+                <p>$$ mg = ks $$</p>
+                <p>En movimiento:</p>
+                <p>$$ m \frac{d^2 x}{dt^2} = -kx $$</p>
+                <p>Donde \( x(t) \) es el desplazamiento respecto al equilibrio.</p>
+            </div>
+        </section>
+ 
+        <!-- Sección 4: Movimiento Libre No Amortiguado -->
+        <section id="movimiento-no-amortiguado" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Movimiento Libre No Amortiguado</h2>
+                <h5>Ecuación:</h5>
+                <p>$$ \frac{d^2 x}{dt^2} + \omega^2 x = 0, \quad \omega = \sqrt{\frac{k}{m}} $$</p>
+ 
+                <h5>Solución general:</h5>
+                <p>$$ x(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t) $$</p>
+ 
+                <h5>Características:</h5>
+                <ul>
+                    <li>Periodo: \( T = \frac{2\pi}{\omega} \)</li>
+                    <li>Frecuencia: \( f = \frac{\omega}{2\pi} \)</li>
+                    <li>Movimiento oscilatorio continuo e idealizado (sin fricción).</li>
+                </ul>
+            </div>
+        </section>
+ 
+<!-- Sección 5: Movimiento Libre Amortiguado -->
+<section id="movimiento-amortiguado" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Movimiento Libre Amortiguado</h2>
+        <p>Con resistencia (por ejemplo, aire), se añade un término proporcional a la velocidad:</p>
+        <p>$$ m \frac{d^2 x}{dt^2} + \beta \frac{dx}{dt} + kx = 0 $$</p>
+        <p>Dividiendo por \( m \):</p>
+        <p>$$ \frac{d^2 x}{dt^2} + 2\lambda \frac{dx}{dt} + \omega^2 x = 0 $$</p>
+        <p>Donde:</p>
+        <p>$$ 2\lambda = \frac{\beta}{m}, \quad \omega^2 = \frac{k}{m} $$</p>
+
+        <!-- Separador visual (opcional) -->
+        <hr class="my-4">
+
+        <!-- Tipos de Movimiento Amortiguado -->
+        <h4 class="text-center mb-4">Tipos de Movimiento Amortiguado</h4>
+        <div class="row">
+
+                    <!-- Caso I: Sobreamortiguado -->
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Caso I: Sobreamortiguado</h5>
+                                <p>$$ \lambda^2 > \omega^2 $$</p>
+                                <p>Regresa al equilibrio sin oscilar:</p>
+                                <p>$$ x(t) = c_1 e^{m_1 t} + c_2 e^{m_2 t} $$</p>
+                                <img
+                                    src="https://res.cloudinary.com/dmsnmukix/image/upload/v1747238793/SobreAmortiguado_jwsm0i.png"
+                                    class="img-fluid mt-3"
+                                    alt="Gráfico Sobreamortiguado"
+                                />
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Caso II: Críticamente amortiguado -->
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Caso II: Críticamente amortiguado</h5>
+                                <p>$$ \lambda^2 = \omega^2 $$</p>
+                                <p>Regresa rápido al equilibrio, sin rebotar:</p>
+                                <p>$$ x(t) = (c_1 + c_2 t) e^{-\lambda t} $$</p>
+                                <img
+                                    src="https://res.cloudinary.com/dmsnmukix/image/upload/v1747239016/CriticamenteAmortiguado_yjyeq5.png"
+                                    class="img-fluid mt-3"
+                                    alt="Gráfico Críticamente amortiguado"
+                                />
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Caso III: Subamortiguado -->
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Caso III: Subamortiguado</h5>
+                                <p>$$ \lambda^2 < \omega^2 $$</p>
+                                <p>Oscila con amplitud decreciente:</p>
+                                <p>$$ x(t) = e^{-\lambda t} \left( c_1 \cos(\mu t) + c_2 \sin(\mu t) \right) $$</p>
+                                <p>Donde:</p>
+                                <p>$$ \mu = \sqrt{\omega^2 - \lambda^2} $$</p>
+                                <img
+                                    src="https://res.cloudinary.com/dmsnmukix/image/upload/v1747239143/SubAmortiguado_tdsuyl.png"
+                                    class="img-fluid mt-3"
+                                    alt="Gráfico Subamortiguado"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+ 
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Comparación de Tipos de Amortiguamiento</h2>
+        <p class="text-center">
+            Visualización del desplazamiento \( x(t) \) en un sistema masa-resorte para distintos coeficientes de amortiguamiento.
+        </p>
+
+        <div class="d-flex justify-content-center mb-3">
+            <button id="btnSub" class="btn btn-primary me-2">Subamortiguado</button>
+            <button id="btnCritico" class="btn btn-success me-2">Críticamente Amortiguado</button>
+            <button id="btnSobre" class="btn btn-danger">Sobreamortiguado</button>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <canvas
+                id="amortiguamientoCanvas"
+                width="700"
+                height="300"
+                style="border: 1px solid #ccc; background-color: white"
+            ></canvas>
+        </div>
+
+        <p class="text-center mt-3">
+            <span style="color: #007bff;">● Subamortiguado</span> &nbsp;
+            <span style="color: #28a745;">● Críticamente amortiguado</span> &nbsp;
+            <span style="color: #dc3545;">● Sobreamortiguado</span>
+        </p>
+    </div>
+</section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
