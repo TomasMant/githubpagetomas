@@ -1,7 +1,3 @@
-/* Importar la fuente desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-
-/* Aplicar la nueva fuente a los títulos */
 h1, h2, h4, h5 {
     font-family: 'Poppins', sans-serif;
 }
